@@ -1,0 +1,115 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<div class="inner">
+            <div class="main">
+                <section id="content">
+                                   <div class="slider">
+                        <ul class="items">
+                            <li>
+                                <img src="{{ STATIC_URL }}bootstrap/images/h.jpg" alt="" />
+                                <div class="banner">
+                                    <strong class="title">
+                                       <h4>  <strong>Regist</strong><em>trate</em> </h4>
+                                    </strong>
+                                     <form action="." method="POST">
+                                    {% csrf_token %}
+                                    {{ mensaje }}
+                                    {{ form.as_p }}
+                                    <input type="submit" class="button-1" value="Login">
+                            </form>
+                                 </div>
+                            </li>
+                            <li>
+                                <img src="{{ STATIC_URL }}bootstrap/images/pilfru.jpg" alt="" />
+                                <div class="banner">
+                                    <strong class="title">
+                                       <h4>  <strong>Regist</strong><em>trate</em> </h4>
+                                    </strong>
+                                     <form action="." method="POST">
+                                    {% csrf_token %}
+                                    {{ mensaje }}
+                                    {{ form.as_p }}
+                                    <input type="submit" class="button-1" value="Login">
+                                    </form>
+                                </div>
+
+                            </li>
+                            <li>
+                                <img src="{{ STATIC_URL }}bootstrap/images/slider-img1.jpg" alt="" />
+                                <div class="banner">
+                                   <strong class="title">
+                                       <h4>  <strong>Regist</strong><em>trate</em> </h4>
+                                    </strong>
+                                     <form action="." method="POST">
+                                    {% csrf_token %}
+                                    {{ mensaje }}
+                                    {{ form.as_p }}
+                                    <input type="submit" class="button-1" value="Login">
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="{{ STATIC_URL }}bootstrap/images/bebe.jpg" alt="" />
+                                <div class="banner">
+                                   <strong class="title">
+                                       <h4>  <strong>Regist</strong><em>trate</em> </h4>
+                                    </strong>
+                                     <form action="." method="POST">
+                                    {% csrf_token %}
+                                    {{ mensaje }}
+                                    {{ form.as_p }}
+                                    <input type="submit" class="button-1" value="Login">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="pags">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                     <div class="bg">
+                        <div class="padding">
+                            <div class="wrapper">
+                                <article class="col-1">
+                                    <strong class="title">
+                                       <h4> <strong>Productos</strong></h4>
+                                    </strong>
+                                    <p>PIL ANDINA industria dedicada a la producción de leche fluida y en polvo, además de otrosproductos derivados lacteos y saborizados</p>
+                                    <div class="relative">
+                                        <a class="button-2" href="/categorias/">Ver Catalogo de Productos</a>
+                                    </div>
+                                </article>
+                                <article class="col-1">
+                                    <strong class="title">
+                                       <h4> <strong>Noticias</strong></h4>
+                                    </strong>
+                                    <p>Con el afan de mantener informada a nuestros consumidores PIL ANDINA publica constantemente las diferentes novedades sobre lanzamientos de productos y mucho más... .</p>
+                                    <div class="relative">
+                                        <a class="button-2" href="#">Enterate Aqui</a>
+                                    </div>
+                                </article>
+                                <article class="col-2">
+                                    <strong class="title">
+                                       <h4> <strong>Pil Contigo en la <center>Cocina</center></strong></h4>
+                                    </strong>
+                                    <p>Por que compartimos nuestras mejores recetas contigo para sorprender a tú familia</p>
+                                    <div class="relative">
+                                        <a class="button-2" href="#">Recetas</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                     <img src="{{ STATIC_URL }}bootstrap/images/CRECE.jpg" alt="" />
+
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

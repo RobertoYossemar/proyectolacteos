@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<div class="inner">
+            <div class="main" >
+                <center>
+                <section id="content">
+
+				<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">{% csrf_token %}
+					{% for field in formulario %}
+						{{field.errors}}
+
+						<div class = "control-group">
+							{{ field.label_tag }}
+							<div class="controls">
+								{{ field}}								
+
+							</div>
+							
+						</div>
+					{% endfor %}
+                    {% for field in formulariostock %}
+						                {{field.errors}}
+
+						            <div class = "control-group">
+							            {{ field.label_tag }}
+							            <div class="controls">
+								            {{ field}}
+
+							            </div>
+
+						            </div>
+					                {% endfor %}
+					<button type="submit"> modificar </button> 
+
+				</form>
+
+                </section>
+</center>                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

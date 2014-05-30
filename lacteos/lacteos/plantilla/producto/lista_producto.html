@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<div class="inner" >
+            <div class="main" >
+                <center>
+                <section id="content">
+
+
+        <div class='row'>
+            {% if user.is_authenticated %}
+                <p><a href="/producto/nuevo" class="button-2" >Agregar Nuevo Producto </a></p>
+            {% endif %}
+
+		     {% for fila in lista %}
+                 {% for cant in listastock %}
+                     {% if fila.id == cant.reg_pro_id %}
+                       <div class='span12'>
+                          <br> Nombre.- {{ fila.NombreProduc }}<br>
+                          Precio Unidad.-Bs.{{ fila.Precio }}<br>
+                          Cantidad Existente.-{{ cant.cantidad }} {{ cant.unidad }}
+                          <p>
+                           <img src="/media/{{ fila.Portada }}" width="120" height="90">
+                          </p>
+                          <p>
+                             {% if user.is_authenticated %}
+					           <a href="{% url 'apps.productos.views.Modificar_Producto' fila.id %}" class="button-2"> modificar </a>
+                             {% endif %}
+                          </p>
+                       </div>
+                     {% endif %}
+                 {% endfor %}
+             {% endfor %}
+
+	    </div>
+
+                </section>
+</center>                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

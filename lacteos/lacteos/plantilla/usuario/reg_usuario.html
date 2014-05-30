@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block contenido %}
+
+<div class="inner">
+            <div class="main" >
+                <section id="content">
+                   <div class="content">
+					<h3>Registro de Ususario</h3>
+                    <div class="col">
+				         <form action="" method="POST" class="form-horizontal"> {% csrf_token %}
+                            {{ formulario.as_p }}
+
+                            {% for field in formularioUsuario %}
+                             {{field.errors}}
+                                <div class = "control-group">
+							        {{ field.label_tag }}
+							            <div class="controls">
+								             {{ field}}
+
+							            </div>
+
+						            </div>
+					                {% endfor %}
+
+                                    {% for field in formPerfil %}
+						                {{field.errors}}
+
+						            <div class = "control-group">
+							            {{ field.label_tag }}
+							            <div class="controls">
+								            {{ field}}
+
+							            </div>
+
+						            </div>
+					                {% endfor %}
+
+                                    <input type="submit" class="button-1" value="GUARDAR">
+
+                         </form>
+                        </div>
+
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
