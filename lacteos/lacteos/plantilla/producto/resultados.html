@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div>
+	<ul>
+	{%for item in lista%}
+		<p><a href="/productos/{{item.id}}/">
+        <p>{{item.NombreProduc}}</p></a>
+	{%endfor%}
+	</ul>
+</div>
+
+</body>
+</html>

@@ -13,13 +13,13 @@ class Producto(models.Model):
     Precio=models.FloatField(null= True)
     Portada=models.ImageField(upload_to='portada', null=True)
     Estado=models.BooleanField(default=True)
-    RegistroCateg=models.ForeignKey(Categoria)
+    RegistroCateg=models.ManyToManyField(Categoria)
 
     def __unicode__(self):
     	return self.NombreProduc
     class Meta:
     	verbose_name_plural='Productos Registrados'
-        ordering=['RegistroCateg']
+        ordering=['NombreProduc']
 
 class Stock(models.Model):
     fecha_ing = models.DateField(verbose_name='Fecha de Registro',auto_now_add=True)

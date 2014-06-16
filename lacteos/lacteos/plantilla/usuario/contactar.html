@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+{% block contenido %}
+        <div class="inner">
+            <div class="main">
+                <section id="content">
+                    <div class="indent">
+                    	<div class="wrapper">
+                        	<article class="col-1">
+                            	<div class="indent-left">
+                                	<h3>Mandanos Un Correo</h3>
+                                    <div class="p3">
+                                        <form id="contact-form" method="post" enctype="multipart/form-data">                    
+                                            <fieldset>
+                                                {% if info_enviado %}
+                                                Gracias pro enviar un comentario, nos contactaremos contigo
+                                                <br>
+                                                La informacion  recibida es la siguiente<br>
+                                                <p>Email utlizado:{{ email }}</p>
+                                                <p>Texto Citado:</p><br><h3>{{ texto }}</h3>
+                                                {% else %}
+                                                    <form  action="." method="POST">
+                                                    {% csrf_token %}
+                                                    {{ form.as_p }}
+                                                    <input type="submit" value="Enviar"/>
+                                                    </form>
+                                                {% endif %}
+                                            </fieldset>						
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="bg">
+                                    <div class="padding">
+                                    	<h3>Miscellaneous Info</h3>
+                                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+	<!--==============================footer=================================-->
+    <footer>
+    	<div class="padding">
+        	<div class="main">
+                <div class="wrapper">
+                	<div class="fleft footer-text">
+                    	<span>Good Cook</span> &copy; 2011
+                        <strong>Website Template by <a rel="nofollow" class="link" target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></strong>
+                    </div>
+                    <ul class="list-services">
+                    	<li>Link to Us:</li>
+                    	<li><a class="tooltips" title="facebook" href="#"></a></li>
+                        <li class="item-1"><a class="tooltips" title="twitter" href="#"></a></li>
+                        <li class="item-2"><a class="tooltips" title="linkedin" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

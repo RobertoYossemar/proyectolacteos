@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7165e42-218c-4ee4-bbbf-1ab4f605437a" name="Default" comment="" />
+    <list default="true" id="b085036e-79a4-4d72-9b40-f774a484fad7" name="Default" comment="" />
     <ignored path="lacteos.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/settings.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401295100430" ignored="false" />
-    <file path="F:/supermerc/principal/models.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1399840011463" ignored="false" />
-    <file path="/urls.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401295770671" ignored="false" />
-    <file path="/index.html" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401151224196" ignored="false" />
-    <file path="/views.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401295893149" ignored="false" />
-    <file path="/models.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401294042442" ignored="false" />
-    <file path="/forms.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1400031083821" ignored="false" />
-    <file path="/reg_usuario.html" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1400087180804" ignored="false" />
-    <file path="/a.dummy" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1399858075822" ignored="false" />
-    <file path="F:/supermerc/principal/admin.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1399932970729" ignored="false" />
-    <file path="F:/supermerc/principal/views.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1399934999656" ignored="false" />
-    <file path="/admin.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401147896388" ignored="false" />
-    <file path="/lista_producto.html" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401296038403" ignored="false" />
-    <file path="/lista_categorias.html" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1359775615496" ignored="false" />
-    <file path="/nuevo_produc.html" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1400374373740" ignored="false" />
-    <file path="/login.html" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1359772273039" ignored="false" />
-    <file path="/style.css" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1359770845952" ignored="false" />
-    <file path="$PROJECT_DIR$/../../ajaxDjango/ajax/ajax/apps/autenticacion/admin.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401148005824" ignored="false" />
-    <file path="$PROJECT_DIR$/../../ajaxDjango/ajax/ajax/wsgi.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401150460069" ignored="false" />
-    <file path="/wsgi.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401150460069" ignored="false" />
-    <file path="$PROJECT_DIR$/../../ajaxDjango/ajax/ajax/apps/ventas/models.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401292650951" ignored="false" />
-    <file path="$PROJECT_DIR$/../../ventas/apps/__init__.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401294556792" ignored="false" />
-    <file path="$PROJECT_DIR$/../../ventas/ventas/settings.py" changelist="d7165e42-218c-4ee4-bbbf-1ab4f605437a" time="1401295105016" ignored="false" />
+    <file path="/settings.py" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402910639432" ignored="false" />
+    <file path="/urls.py" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402916839221" ignored="false" />
+    <file path="/index.html" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402918483332" ignored="false" />
+    <file path="/admin.py" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402912687847" ignored="false" />
+    <file path="/forms.py" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402912751964" ignored="false" />
+    <file path="/views.py" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402916047606" ignored="false" />
+    <file path="/lista_categorias.html" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402918730074" ignored="false" />
+    <file path="/Dummy.txt" changelist="b085036e-79a4-4d72-9b40-f774a484fad7" time="1402961770328" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/usuarios/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="6" column="31" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,25 +43,74 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/productos/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="40" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lista_producto.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/lista_producto.html">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="7" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
+            <state line="4" column="18" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nueva_categoria.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/nueva_categoria.html">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lacteos/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="-4.423077">
+            <state line="12" column="0" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lacteos/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lacteos/plantilla/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="35" selection-start="4836" selection-end="4836" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lista_categorias.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/lista_categorias.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="64" selection-start="1269" selection-end="1269" vertical-scroll-proportion="-5.576923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/productos/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="27" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contactar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lacteos/plantilla/usuario/contactar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,54 +119,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/usuarios/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/usuarios/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="36" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="15" selection-start="226" selection-end="226" vertical-scroll-proportion="0.18923934">
-              <folding>
-                <element signature="e#16#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lacteos/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="0" selection-start="4078" selection-end="4078" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/inicio/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="22" column="44" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,49 +135,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lacteos/plantilla/producto/nuevo_produc.html" />
-        <option value="$PROJECT_DIR$/lacteos/static/bootstrap/css/style.css" />
-        <option value="$PROJECT_DIR$/lacteos/plantilla/usuario/login.html" />
-        <option value="$PROJECT_DIR$/lacteos/plantilla/producto/lista_categorias.html" />
-        <option value="$PROJECT_DIR$/apps/usuarios/views.py" />
-        <option value="$PROJECT_DIR$/lacteos/plantilla/urls.py" />
-        <option value="$PROJECT_DIR$/apps/productos/admin.py" />
-        <option value="$PROJECT_DIR$/apps/usuarios/admin.py" />
-        <option value="$PROJECT_DIR$/apps/usuarios/urls.py" />
-        <option value="$PROJECT_DIR$/apps/productos/urls.py" />
-        <option value="$PROJECT_DIR$/lacteos/plantilla/index.html" />
+        <option value="$PROJECT_DIR$/apps/__init__.py" />
         <option value="$PROJECT_DIR$/lacteos/settings.py" />
+        <option value="$PROJECT_DIR$/apps/productos/admin.py" />
+        <option value="$PROJECT_DIR$/apps/productos/forms.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/models.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/views.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/urls.py" />
+        <option value="$PROJECT_DIR$/apps/usuarios/admin.py" />
         <option value="$PROJECT_DIR$/apps/productos/models.py" />
-        <option value="$PROJECT_DIR$/lacteos/urls.py" />
         <option value="$PROJECT_DIR$/apps/productos/views.py" />
-        <option value="$PROJECT_DIR$/lacteos/plantilla/producto/lista_producto.html" />
+        <option value="$PROJECT_DIR$/apps/usuarios/forms.py" />
+        <option value="$PROJECT_DIR$/apps/productos/urls.py" />
+        <option value="$PROJECT_DIR$/lacteos/urls.py" />
+        <option value="$PROJECT_DIR$/lacteos/plantilla/index.html" />
+        <option value="$PROJECT_DIR$/lacteos/plantilla/producto/lista_categorias.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1040" />
     <option name="height" value="744" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Spelling</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>SpellCheckingInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -218,7 +185,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,74 +307,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lacteos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lacteos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inicio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ventas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../libros de seminario/exampleajaxdjango-master" />
     <property name="FullScreen" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <PyConsoleSettings />
-    </option>
-    <option name="myDjangoConsoleState">
-      <PyConsoleSettings />
-    </option>
-  </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Todo Septimo\seminario2014\lacteos\lacteos\plantilla" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\seminario2014\lacteos\apps\usuarios" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.views">
-    <configuration default="false" name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Django server.lacteos">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps/inicio" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="lacteos" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/inicio/views.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonCover" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonCover" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
+    <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -426,25 +360,9 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="lacteos" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -525,47 +443,41 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Django server.lacteos" />
-      <item index="1" class="java.lang.String" itemvalue="Python.views" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.views" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d7165e42-218c-4ee4-bbbf-1ab4f605437a" name="Default" comment="" />
-      <created>1399838669903</created>
-      <updated>1399838669903</updated>
+      <changelist id="b085036e-79a4-4d72-9b40-f774a484fad7" name="Default" comment="" />
+      <created>1402910088755</created>
+      <updated>1402910088755</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1040" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2030303" sideWeight="0.6712329" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21917808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2597137" sideWeight="0.6729452" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270548" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270548" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -632,113 +544,119 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/productos/admin.py">
+    <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="33" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="18" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/lista_categorias.html">
+    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/usuario/contactar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="95" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
+        <state line="22" column="0" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lacteos/plantilla/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="34" selection-start="4567" selection-end="4567" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lacteos/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/productos/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/lista_producto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/nueva_categoria.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="587" selection-end="587" vertical-scroll-proportion="-4.423077">
+        <state line="87" column="68" selection-start="5391" selection-end="5391" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/usuarios/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="3" column="0" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/usuarios/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="36" selection-start="2304" selection-end="2304" vertical-scroll-proportion="0.0">
+        <state line="56" column="0" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="44" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/usuarios/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="6" column="31" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/models.py">
+    <entry file="file://$PROJECT_DIR$/apps/productos/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lacteos/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="0" selection-start="4078" selection-end="4078" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/productos/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="18" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/inicio/forms.py">
+    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/usuario/contactar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="15" selection-start="226" selection-end="226" vertical-scroll-proportion="0.18923934">
+        <state line="22" column="0" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="35" selection-start="4836" selection-end="4836" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lacteos/plantilla/producto/lista_categorias.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="64" selection-start="1269" selection-end="1269" vertical-scroll-proportion="-5.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/productos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="27" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#16#50#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lacteos/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lacteos/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>

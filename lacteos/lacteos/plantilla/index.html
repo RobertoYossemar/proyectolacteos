@@ -85,15 +85,9 @@
                                 <li><a href="/noticias">Noticias</a></li>
                                 <li><a href="/promociones">Promociones</a></li>
                                 <li><a href="/promociones">Recetas</a></li>
-                                <li class="last"><a href="contacts.html">Contactos</a></li>
-                                <!--<li>
-                                    <div id="search">
-                                    <form method="get" action="">
-                                        <fieldset>  <input type="text" name="s" id="search-text" size="15" /><input type="image" id="search-submit" value="" />
-                                        </fieldset>
-                                    </form>
-                                </div></li>--->
-
+                                <li class="last"><a href="/contactar">Contactos</a></li>
+                                <li><a href="{% url 'apps.productos.views.Buscar_producto' %}">Buscar</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -206,7 +200,7 @@
                 	<div class="fleft footer-text">
                     	<span>Pil Tarija</span> &copy; 2014
                         <strong>PILTARIJA <a rel="nofollow" class="link" target="_blank" href="http://www.Piltarija.com/"></a></strong>
-                        <!-- {%FOOTER_LINK} -->
+                        <!-- {FOOTER_LINK} -->
 
                     </div>
                     <ul class="list-services">

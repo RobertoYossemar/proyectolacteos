@@ -1,11 +1,16 @@
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from apps.inicio.forms import Perform,perfil_userForm,LoginForm
+from apps.usuarios.forms import Perform,perfil_userForm,LoginForm,ContactanosF
 from django.contrib.auth.forms import UserCreationForm
 from  django.contrib.auth import login,authenticate,logout
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
+from django.core.mail import EmailMultiAlternatives
+
+def iniciopag(request):
+    return render_to_response('index.html', context_instance=RequestContext(request))
+#inscripcion de un nuevo usuario
 def nueva_inscripcion(request):
     if request.method =='POST':
         formulario = UserCreationForm(request.POST)
@@ -49,3 +54,26 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/')
+#recepcion de contactos
+def Recepcion_contactos(request):
+    info_enviado = False
+    email = ""
+    titulo = ""
+    texto = ""
+    if request.method == "POST":
+        formulario = ContactanosF(request.POST)
+        if formulario.is_valid():
+            info_enviado = True
+            email = formulario.cleaned_data['Email']
+            titulo = formulario.cleaned_data['Titulo']
+            texto = formulario.cleaned_data['Texto']
+            to_admin = 'ocamporoberto97@gmail.com'
+            html_content = "Informacion recibida de [%s]<br><br><br>***Mensaje***<br><br>%s" % (email, texto)
+            msg = EmailMultiAlternatives('Correo de Contacto', html_content, 'from@server.com', [to_admin])
+            msg.attach_alternative(html_content, 'text/html')
+            msg.send()
+
+    else:
+        formulario = ContactanosF()
+    ctx = {'form': formulario, "email": email, "titulo": titulo, "texto": texto, "info_enviado": info_enviado}
+    return render_to_response('usuario/contactar.html', ctx, context_instance=RequestContext(request))

@@ -5,15 +5,14 @@
             <div class="main" >
                 <section id="content">
 						        <div class="newsletter">{% csrf_token%}
-                                    <center>
                                       <strong class="title">
-                                       <H1> <strong>-NUESTROS PRODUCTOS-</strong></H1> </strong>
-
+                                       <h4>Obseverve todos nuestros productos con un <a href="/producto/">click</a></h4>
+                                       <H1> <strong>-ELIJA LA CATEGORIA QUE GUSTE-</strong></H1> </strong>
                                   {% for dato in lista %}
-                                        <table width="616" border="1">
+                                        <table width="616" border="4">
 
                                          <tr><P></P>
-                                             <th width="300" scope="col"><p><a href="/productos">
+                                             <th width="300" scope="col"><p><a href="/productos/{{dato.id}}/">
                                                  <p>{{ dato.CategoriaNombre }}</p>
                                                  <img src="/media/{{ dato.Portadacategoria }}" width="300" height="200"></a></p>
 
@@ -22,10 +21,9 @@
 
                                   </table>
 {% endfor %}                             {% if user.is_authenticated %}
-                                        <br><a href="/categoria/nueva" class="button-2">Agregar Nueva Categoria </a>
+                                        <br><a href="/categorias/nueva" class="button-2">Agregar Nueva Categoria </a>
                                         {% endif %}
 
-                                    </center>
 						        </div>
 
 

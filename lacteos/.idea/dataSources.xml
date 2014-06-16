@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1313145219">
-    <data-source source="LOCAL" name="Django default" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d2ad8860-7faa-4376-b32d-94be3330fdee">
+  <component name="DataSourceManagerImpl" format="xml" hash="3143537420">
+    <data-source source="LOCAL" name="Django default" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="b5eebeaa-594e-4355-9e78-48e10ea9dad4">
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/lacteosdb</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/lacteos</jdbc-url>
       <user-name>root</user-name>
       <libraries>
         <library>

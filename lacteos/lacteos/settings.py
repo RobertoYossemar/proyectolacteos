@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'lacteosdb',                      # Or path to database file if using sqlite3.
+        'NAME': 'lacteos',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': 'root',
         'PASSWORD': '',
@@ -86,7 +86,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'dd8js$tenn7942++z)xuysniel)xfab5-bq#4xqao5+q0h=%+('
+SECRET_KEY = '0@xignf6unkb_#56*e2zyqfsichf*nxst3fpn2s+=+_m)cv@u0'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -111,7 +111,7 @@ ROOT_URLCONF = 'lacteos.urls'
 WSGI_APPLICATION = 'lacteos.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(ruta,'plantilla')
+    os.path.join(ruta,'plantilla'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -126,10 +126,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'apps.inicio',
-    'apps.productos',
     'apps.usuarios',
+    'apps.productos',
 )
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.

@@ -2,9 +2,10 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from apps.productos.models import Producto,Categoria,Stock
-from apps.inicio.forms import FormCategoria,FormStock,ProductoForm
+from apps.usuarios.forms import FormCategoria,FormStock,ProductoForm,BuscarProd
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
+from django.db.models import Q
 @permission_required('principal.add_categoria',login_url='/categorias')
 def nueva_categoria(request):#esta funcion devuelve el formulario creado en form.py
     if request.method == 'POST':
@@ -30,15 +31,15 @@ def lista_categorias(request):
     return render_to_response('producto/lista_categorias.html', {'lista': categorias}, context_instance=RequestContext(request))
 #@permission_required('principal.add_categoria',login_url='/')
 
-def lista_productos(request):
+def lista_productos2(request):
     productos = Producto.objects.filter(Estado = True)
     stock = Stock.objects.all()
     categoria = Categoria.objects.all()
-    return render_to_response('producto/lista_producto.html', {'lista': productos,'listastock':stock,'listacategoria':categoria}, context_instance=RequestContext(request))
-#def lista_productos(request,id_cat):
- #   productos = Producto.objects.filter(RegistroCateg__id=id_cat,Estado=True)
-  #  stock=Stock.objects.all()
-   # return render_to_response('producto/lista_producto.html',{'lista':productos,'listastock':stock},context_instance=RequestContext(request))
+    return render_to_response('producto/lista_producto2.html', {'lista': productos,'listastock':stock,'listacategoria':categoria}, context_instance=RequestContext(request))
+def lista_productos(request,id_cat):
+    productos = Producto.objects.filter(RegistroCateg__id=id_cat,Estado=True)
+    stock=Stock.objects.all()
+    return render_to_response('producto/lista_producto.html',{'lista':productos,'listastock':stock},context_instance=RequestContext(request))
 def lista_stock(request):
     stocks = Stock.objects.all()
     return render_to_response('producto/lista_producto.html', {'lista': stocks})
@@ -53,7 +54,7 @@ def Crear_Producto(request):
                 stock = formulariostock.save()
                 stock.reg_pro=pro
                 stock.save()
-                return HttpResponseRedirect('/productos/')
+                return HttpResponseRedirect('/categorias/')
         else:
             formularioproducto = ProductoForm()
             formulariostock = FormStock()
@@ -71,10 +72,19 @@ def Modificar_Producto(request, id_prod):
             if formulario.is_valid()and formulariostock.is_valid():
                 formulario.save()
                 formulariostock.save()
-                return HttpResponseRedirect('/productos/')
+                return HttpResponseRedirect('/categorias/')
         else:
             formulario = ProductoForm(instance=productos)
-            formulariostock = FormStock()
+            formulariostock = FormStock(instance=stocks)
         return render_to_response('producto/modifica_produc.html', {'formulario': formulario,'formulariostock':formulariostock},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')
+def Buscar_producto(request):
+    if request.method=="POST":
+        form=BuscarProd(request.POST)
+        if(form.is_valid()):
+            criterio=request.POST["buscar"]
+            lista=Producto.objects.filter(Q(NombreProduc__contains=criterio))
+            return render_to_response("producto/resultados.html",{"lista":lista},RequestContext(request))
+    form=BuscarProd()
+    return render_to_response("index.html",{"form":form},RequestContext(request))
