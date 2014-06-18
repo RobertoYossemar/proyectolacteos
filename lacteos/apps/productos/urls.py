@@ -9,5 +9,9 @@ urlpatterns = patterns('',
     url(r'^producto/nuevo/$',Crear_Producto, name='Nuevo Producto'),
     url(r'^principal/update/(?P<id_prod>\d+)/$',Modificar_Producto,name='Modificar Producto'),
     url(r'^producto/buscar/$',Buscar_producto,name='Buscar Producto'),
+    url(r'^Noticias/$',Lista_Noticias,name='Noticias'),
+    url(r'^noticia/nueva/$',nueva_noticia,name='Noticias'),
+    url(r'^reportes/$',reportes,name='reportes'),
+
 
 )

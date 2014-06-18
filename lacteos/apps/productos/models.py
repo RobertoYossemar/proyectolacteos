@@ -1,4 +1,5 @@
 from django.db import models
+
 class Categoria(models.Model):
     CategoriaNombre=models.CharField(max_length='100',verbose_name='Nombre de categoria')
     Portadacategoria=models.ImageField(upload_to='portada', null=True)
@@ -33,3 +34,14 @@ class Stock(models.Model):
         verbose_name_plural='stock  de producto'
         ordering=['fecha_ing']
 
+class Noticias(models.Model):
+    NoticiaNombre=models.CharField(max_length='150',verbose_name="Nombre de Noticia")
+    fecha= models.DateField(verbose_name='Fecha de PUBLICACION',auto_now_add=True)
+    foto=models.ImageField(upload_to='portada', null=True)
+    Contenido=models.TextField()
+
+    def __unicode__(self):
+        return self.NoticiaNombre
+    class Meta:
+        verbose_name_plural='Noticias'
+        ordering=['fecha']

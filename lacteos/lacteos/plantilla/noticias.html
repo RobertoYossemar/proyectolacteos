@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block contenido %}
+        <div class="inner">
+            <div class="main">
+                <section id="content">
+                    <div class="indent">
+
+                    	<div class="wrapper">{% csrf_token %}
+                             {% if user.is_authenticated %}
+                             <br><a href="/noticia/nueva" class="button-2">Nueva Noticia </a>
+                             {% endif %}
+                             {% for dato in lista %}
+                              <div class="not>
+                                  <article class="col-1">
+                                  <div class="bg">
+
+                                    	<h3><p>{{dato.NoticiaNombre}}</p></h3>
+                                         <p>{{ dato.fecha }}</p>
+                                        <p>{{ dato.Contenido }}</p>
+                                        <img src="/media/{{ dato.foto }}" width="300" height="200"></a></p>
+                                  </div>
+                                  </article>
+                              </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+	<!--==============================footer=================================-->
+    <footer>
+    	<div class="padding">
+        	<div class="main">
+                <div class="wrapper">
+                	<div class="fleft footer-text">
+                    	<span>Good Cook</span> &copy; 2011
+                        <strong>Website Template by <a rel="nofollow" class="link" target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></strong>
+                    </div>
+                    <ul class="list-services">
+                    	<li>Link to Us:</li>
+                    	<li><a class="tooltips" title="facebook" href="#"></a></li>
+                        <li class="item-1"><a class="tooltips" title="twitter" href="#"></a></li>
+                        <li class="item-2"><a class="tooltips" title="linkedin" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>
