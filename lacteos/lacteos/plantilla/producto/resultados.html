@@ -1,17 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-	<ul>
-	{%for item in lista%}
-		<p><a href="/productos/{{item.id}}/">
-        <p>{{item.NombreProduc}}</p></a>
-	{%endfor%}
-	</ul>
-</div>
+<{% extends 'index.html' %}
+{% block contenido %}
+<div class="inner" >
+            <div class="main" >
+                <center>
+                <section id="content">
 
-</body>
-</html>
+       <div class='row'>
+              <strong class="title" >
+                                       <CENTER<H1><strong>Productos encontrados</strong></H1> </strong><br>
+           <div class="wrapper">
+            {%for item in lista%}
+            {% for stock in lista2 %}
+               {% if item.id == stock.reg_pro_id %}
+                       <article class="col-1">
+                          <div class="bg">
+                          <br> Nombre.- {{ item.NombreProduc }}<br>
+                          Precio Unidad.-Bs.{{ item.Precio }}<br>
+                          Cantidad Disponible.-{{ stock.cantidad }} {{ stock.unidad }}
+                          <p>
+                            <img src="/media/{{ item.Portada }}" width="120" height="90">
+                          </p>
+                          <p>
+                             {% if user.is_authenticated %}
+					           <a href="{% url 'apps.productos.views.Modificar_Producto' item.id %}" class="button-2"> modificar </a>
+                             {% endif %}
+                          </p>
+                       </div>
+                           </article>
+                     {% endif %}
+                 {% endfor %}
+             {% endfor %}
+        </div>
+
+	    </div>
+
+                </section>
+</center>                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

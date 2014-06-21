@@ -1,48 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$("#id_buscar").keyup(function(event) {
-			//console.log(event)
-			//which
-			var criterio=$(this).val()
+{% extends 'index.html' %}
+{% block contenido %}
+<div class="inner" >
+            <div class="main" >
+                <center>
+                <section id="content">
+                    <strong class="title" >
+                                       <CENTER<H1><strong>Busqueda</strong></H1> </strong><br>
+                                        <h5>Ingrese el nombre del producto que desea buscar</h5><br>
+                    <script type="text/javascript">
+	                    jQuery(document).ready(function($) {
+	                    	$("#id_buscar").keyup(function(event) {
+			                    //console.log(event)
+			                    //which
+			                var criterio=$(this).val()
 
-			var parametros=$("#buscarForm").serializeObject()
+			                var parametros=$("#buscarForm").serializeObject()
 
-			//console.log(criterio)
-			if (event.which!=8){
-				$.ajax({
-					url: '/producto/buscar/',
-					type: 'POST',
-					data: parametros
-				})
-				.done(function(html) {
-					$("#resultados_buscar").html(html)
-				})
-				.fail(function() {
-					console.log("error");
-				})
-				.always(function() {
-					console.log("complete");
-				});
-				console.log(event.which)
-			}
-		});
-	});
-</script>
-<div>
-	<form action="" method="POST" id="BuscarProd">
-		{%csrf_token%}
-		{{form}}
-	</form>
+			                //console.log(criterio)
+			                if (event.which!=8){
+			                	$.ajax({
+				                	url: '/producto/buscar/',
+			                		type: 'POST',
+		                			data: parametros
+		            		})
+	            			.done(function(html) {
+			        		$("#resultados_buscar").html(html)
+				            })
+				            .fail(function() {
+				        	console.log("error");
+			            	})
+			            	.always(function() {
+			        		console.log("complete");
+			            	});
+			            	console.log(event.which)
+		                	}
+		                    });
+	                    });
+                    </script>
+                    <div>
+	                <form action="" method="POST" id="BuscarProd">
+	        	        {%csrf_token%}
+		                {{form}}
+	                </form>
+                    </div>
+                    <div id="resultados_buscar">
+
+                    </div>
+
+                 </section>
+</center>      <div class="block"></div>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
 </div>
-<div id="resultados_buscar">
 
-</div>
+{% endblock %}
 
-</body>
-</html>
+
+
+

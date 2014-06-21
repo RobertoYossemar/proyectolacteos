@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from django import forms
 from apps.usuarios.models import Perfil,Perfil_user
-from apps.productos.models import Producto,Stock,Categoria,Noticias
+from apps.productos.models import Producto,Stock,Categoria,Noticias,Recetas
 from django.forms import Textarea
 class Perform(ModelForm):
     class Meta:
@@ -37,6 +37,12 @@ class BuscarProd(forms.Form):
 class NoticiaForm(ModelForm):
     class Meta:
         model=Noticias
+        widgets = {
+            'content': Textarea(attrs={'cols': 80, 'rows': 20}),
+        }
+class RecetasForm(ModelForm):
+    class Meta:
+        model=Recetas
         widgets = {
             'content': Textarea(attrs={'cols': 80, 'rows': 20}),
         }

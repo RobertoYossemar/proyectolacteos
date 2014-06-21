@@ -45,3 +45,16 @@ class Noticias(models.Model):
     class Meta:
         verbose_name_plural='Noticias'
         ordering=['fecha']
+
+class Recetas(models.Model):
+    NombreReceta=models.CharField(max_length='150',verbose_name="Nombre de receta")
+    fecha= models.DateField(verbose_name='Fecha de PUBLICACION',auto_now_add=True)
+    foto=models.ImageField(upload_to='portada', null=True)
+    ingredientes=models.TextField()
+    preparacion=models.TextField()
+
+    def __unicode__(self):
+        return self.NombreReceta
+    class Meta:
+        verbose_name_plural='Recetas'
+        ordering=['fecha']

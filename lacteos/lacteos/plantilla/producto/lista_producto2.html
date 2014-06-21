@@ -8,6 +8,7 @@
 
 
         <div class='row'>
+            <div class="wrapper">
             {% if user.is_authenticated %}
                 <p><a href="/producto/nuevo" class="button-2" >Agregar Nuevo Producto </a></p>
             {% endif %}
@@ -15,6 +16,7 @@
 		     {% for fila in lista %}
                  {% for cant in listastock %}
                      {% if fila.id == cant.reg_pro_id %}
+            <article class="col-1">
                        <div class='span12'>
                           <br> Nombre.- {{ fila.NombreProduc }}<br>
                           Precio Unidad.-Bs.{{ fila.Precio }}<br>
@@ -28,11 +30,12 @@
                              {% endif %}
                           </p>
                        </div>
+                </article>
                      {% endif %}
                  {% endfor %}
              {% endfor %}
 
-	    </div>
+	    </div></div>
 
                 </section>
 </center>                <div class="block"></div>

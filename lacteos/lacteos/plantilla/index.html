@@ -58,10 +58,10 @@
                         </ul>
                         <strong class="bg-text">Background:</strong><br>
                         {% if user.is_authenticated %}
-                                          <a href="{% url 'apps.usuarios.views.logout_view' %}">Cerrar sesion</a>
-                                           {% else %}
-                                            <a href="{% url 'apps.usuarios.views.nueva_inscripcion' %}">Crear Nuevo Usuario</a>
-                                           {% endif %}
+                         <a href="{% url 'apps.usuarios.views.logout_view' %}">Cerrar sesion</a>
+                         {% else %}
+                         <a href="{% url 'apps.usuarios.views.nueva_inscripcion' %}">Crear Nuevo Usuario</a>
+                          {% endif %}
                     {% if user.is_authenticated %}
                     <h4>Bienvenido a nuestra comunidad :{{ user.username }}</h4>
                     {% endif %}
@@ -83,10 +83,12 @@
                                 <li><a href="{% url 'apps.usuarios.views.login_view' %}">Login</a></li>
                                 {% endif %}
                                 <li><a href="/Noticias">Noticias</a></li>
-                                <li><a href="/promociones">Promociones</a></li>
-                                <li><a href="/promociones">Recetas</a></li>
+                                <li><a href="/Recetas">Recetas</a></li>
                                 <li class="last"><a href="/contactar">Contactos</a></li>
                                 <li><a href="{% url 'apps.productos.views.Buscar_producto' %}">Buscar</a>
+                                {% if user.is_authenticated %}
+                                <li><a href="/reportesgral/" >REPORTES</a></li>
+                                {% endif %}
                                 </li>
                             </ul>
                         </nav>
@@ -160,7 +162,7 @@
                                     </strong>
                                     <p>PIL ANDINA industria dedicada a la producción de leche fluida y en polvo, además de otrosproductos derivados lacteos y saborizados</p>
                                     <div class="relative">
-                                        <a class="button-2" href="/categorias/">Ver Catalogo de Productos</a>
+                                        <a class="button-2" href="/producto/">Ver Catalogo de Productos</a>
                                     </div>
                                 </article>
                                 <article class="col-1">
@@ -169,7 +171,7 @@
                                     </strong>
                                     <p>Con el afan de mantener informada a nuestros consumidores PIL ANDINA publica constantemente las diferentes novedades sobre lanzamientos de productos y mucho más... .</p>
                                     <div class="relative">
-                                        <a class="button-2" href="#">Enterate Aqui</a>
+                                        <a class="button-2" href="/Noticias/">Enterate Aqui</a>
                                     </div>
                                 </article>
                                 <article class="col-2">
@@ -178,7 +180,7 @@
                                     </strong>
                                     <p>Por que compartimos nuestras mejores recetas contigo para sorprender a tú familia</p>
                                     <div class="relative">
-                                        <a class="button-2" href="#">Recetas</a>
+                                        <a class="button-2" href="/Recetas/">Recetas</a>
                                     </div>
                                 </article>
                             </div>

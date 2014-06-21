@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% block contenido %}
+        <div class="inner">
+            <div class="main">
+                <section id="content">
+                    <div class="indent">
+                        <div class="wrapper">{% csrf_token %}
+                             {% if user.is_authenticated %}
+                             <br><a href="/receta/nueva" class="button-2">Nueva receta </a>
+                             {% endif %}
+                            {% for dato in lista %}
+                              <div class="not>
+                                  <article class="col-1">
+                                  <div class="bg">
+                                        <p>{{dato.fecha}}</p>
+                                      <center> <strong class="title" >
+                                       <H3><strong>{{dato.NombreReceta}}</strong></H3> </strong><br>
+
+                                        <img src="/media/{{ dato.foto }}" width="300" height="200"></center>
+                                        <h4>Ingredientes</h4>
+                                        <p>{{ dato.ingredientes }}</p>
+                                        <h4>Preparacion</h4>
+                                        <p>{{dato.preparacion}}</p>
+
+                                        </a></p>
+                                  </div>
+                                  </article>
+                               </div>
+                            {% if user.is_authenticated %}
+                                    <a href="{% url 'apps.productos.views.Modificar_receta' dato.id %}" class="button-2"> modificar </a>
+                                    {% endif %}
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <!--==============================footer=================================-->
+    <footer>
+        <div class="padding">
+            <div class="main">
+                <div class="wrapper">
+                    <div class="fleft footer-text">
+                        <span>Good Cook</span> &copy; 2011
+                        <strong>Website Template by <a rel="nofollow" class="link" target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></strong>
+                    </div>
+                    <ul class="list-services">
+                        <li>Link to Us:</li>
+                        <li><a class="tooltips" title="facebook" href="#"></a></li>
+                        <li class="item-1"><a class="tooltips" title="twitter" href="#"></a></li>
+                        <li class="item-2"><a class="tooltips" title="linkedin" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript"> Cufon.now(); </script>
+</body>
+</html>

@@ -67,7 +67,7 @@ def Recepcion_contactos(request):
             email = formulario.cleaned_data['Email']
             titulo = formulario.cleaned_data['Titulo']
             texto = formulario.cleaned_data['Texto']
-            to_admin = 'ocamporoberto97@gmail.com'
+            to_admin = 'zasha_sd@hotmail.com'
             html_content = "Informacion recibida de [%s]<br><br><br>***Mensaje***<br><br>%s" % (email, texto)
             msg = EmailMultiAlternatives('Correo de Contacto', html_content, 'from@server.com', [to_admin])
             msg.attach_alternative(html_content, 'text/html')

@@ -1,13 +1,14 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect,HttpResponse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from apps.productos.models import Producto,Categoria,Stock,Noticias
-from apps.usuarios.forms import FormCategoria,FormStock,ProductoForm,BuscarProd,NoticiaForm
+from apps.productos.models import Producto,Categoria,Stock,Noticias,Recetas
+from apps.usuarios.forms import FormCategoria,FormStock,ProductoForm,BuscarProd,NoticiaForm,RecetasForm
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
 import csv
+import json
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 import StringIO
@@ -25,6 +26,9 @@ import pdb
 from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth.decorators import login_required,permission_required
 from django.db.models import Q
+from xhtml2pdf import pisa
+from django.template.loader import render_to_string
+import datetime
 @permission_required('principal.add_categoria',login_url='/categorias')
 def nueva_categoria(request):#esta funcion devuelve el formulario creado en form.py
     if request.method == 'POST':
@@ -80,7 +84,22 @@ def Crear_Producto(request):
         return render_to_response('producto/nuevo_produc.html', {'formularioproducto':formularioproducto, 'formulariostock':formulariostock}, context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')
-@permission_required('principal.change_producto',login_url='/productos')
+@permission_required('principal.change_categoria',login_url='/categorias/')
+def Modificar_categoria(request, id_cat):
+    if request.user.is_authenticated():
+        categoria = get_object_or_404(Categoria, id=id_cat)
+        if request.method == 'POST':
+            formulario = FormCategoria(request.POST, request.FILES, instance=categoria)
+            if formulario.is_valid():
+                formulario.save()
+                return HttpResponseRedirect('/categorias/')
+        else:
+            formulario = FormCategoria(instance=categoria)
+
+        return render_to_response('producto/modificar_categoria.html', {'formulario': formulario},context_instance=RequestContext(request))
+    else:
+        return HttpResponseRedirect('/modi')
+@permission_required('principal.change_producto',login_url='/productos/')
 def Modificar_Producto(request, id_prod):
     if request.user.is_authenticated():
         stocks = get_object_or_404(Stock,pk = id_prod)
@@ -98,15 +117,32 @@ def Modificar_Producto(request, id_prod):
         return render_to_response('producto/modifica_produc.html', {'formulario': formulario,'formulariostock':formulariostock},context_instance=RequestContext(request))
     else:
         return HttpResponseRedirect('/')
+@permission_required('principal.change_receta',login_url='/Recetas/')
+def Modificar_receta(request, id_cat):
+    if request.user.is_authenticated():
+        receta = get_object_or_404(Recetas, id=id_cat)
+        if request.method == 'POST':
+            formulario = RecetasForm(request.POST, request.FILES, instance=receta)
+            if formulario.is_valid():
+                formulario.save()
+                return HttpResponseRedirect('/Recetas/')
+        else:
+            formulario = RecetasForm(instance=receta)
+
+        return render_to_response('producto/mod_receta.html', {'formulario': formulario},context_instance=RequestContext(request))
+    else:
+        return HttpResponseRedirect('/modreceta/')
+
 def Buscar_producto(request):
     if request.method=="POST":
         form=BuscarProd(request.POST)
         if(form.is_valid()):
             criterio=request.POST["buscar"]
             lista=Producto.objects.filter(Q(NombreProduc__contains=criterio))
-            return render_to_response("producto/resultados.html",{"lista":lista},RequestContext(request))
+            lista2=Stock.objects.all()
+            return render_to_response("producto/resultados.html",{"lista":lista,"lista2":lista2},RequestContext(request))
     form=BuscarProd()
-    return render_to_response("index.html",{"form":form},RequestContext(request))
+    return render_to_response("producto/buscador.html",{"form":form},RequestContext(request))
 
 def Lista_Noticias(request):
     noticias=Noticias.objects.all()
@@ -120,7 +156,19 @@ def nueva_noticia(request):
     else:
         formulario = NoticiaForm()
     return render_to_response('nueva_noticia.html', {'formulario': formulario}, context_instance=RequestContext(request))
-
+def Lista_Recetas(request):
+    recetas=Recetas.objects.all()
+    return render_to_response('recetas.html', {'lista': recetas},context_instance=RequestContext(request))
+def nueva_receta(request):
+    if request.method == 'POST':
+        formulario = RecetasForm(request.POST, request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return HttpResponseRedirect('/Recetas')
+    else:
+        formulario = RecetasForm()
+    return render_to_response('nueva_receta.html', {'formulario': formulario}, context_instance=RequestContext(request))
+"""
 def reportes(request):
     productos=Producto.objects.all()
     pdf=create_pdf(productos,"plantilla.prep")
@@ -141,4 +189,37 @@ def create_pdf(catalog, template):
     open(os.path.join(DATA_DIR,'latest.rml'), 'w+').write(rml)
     buf = StringIO.StringIO()
     rml2pdf.go(rml, outputFileName=buf)
-    return buf.getvalue()
+    return buf.getvalue()"""
+
+def crear_reporte(request):
+    productos= Producto.objects.all()
+    stock=Stock.objects.all()
+    html=render_to_string("reporte.html",{'pagesize':'A4','productos':productos,'stock':stock},context_instance=RequestContext(request))
+    return generar_pdf(html)
+
+def generar_pdf(html):
+    resultado=StringIO.StringIO()
+    pdf=pisa.pisaDocument(StringIO.StringIO(html.encode("UTF:8")),resultado)
+    if not pdf.err:
+        return HttpResponse(resultado.getvalue(),mimetype='application/pdf')
+    return HttpResponse("Error en generar el pdf")
+
+def reportesgral(request):
+    return render_to_response('reportesgral.html', context_instance=RequestContext(request))
+
+def compra_view(request, id_prod):
+    if request.user.is_authenticated():
+        p = Producto.objects.get(id=id_prod)
+        #request.session["carrito_de_compra"] = {}
+        dic = not request.session['carrito_de_compra']
+        keys = dic.keys()
+        if not p.nombre in keys:
+            dic[p.nombre] = [1,p]
+        else:
+            dic[p.nombre] = [dic[p.nombre][0]+1,p]
+        request.session['carrito_de_compra'] = dic
+        print dic
+        return HttpResponseRedirect('/productos/page/1/')
+    else:
+        return HttpResponseRedirect('/login/')
+    

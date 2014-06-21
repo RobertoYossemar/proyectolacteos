@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% block contenido %}
+<table border="1px" width="80%" align="center">
+    <th>
+        Producto
+    </th>
+    <th>
+        Precio
+    </th>
+    <th>
+        Fecha de ingreso
+    </th>
+    <th>
+        Fecha de vencimiento
+    </th>
+
+    {% for i in producto %}
+    {% for cant in stock %}
+     {% if i.id == cant.reg_pro_id %}
+        <tr>
+            <td>
+                {{ i.NombreProduc }}
+            </td>
+            <td>
+                {{ i.Precio}}
+            </td>
+            <td>
+                {{ cant.cantidad }}
+            </td>
+            <td>
+                {{ cant.fecha_ing }}
+            </td>
+            <td>
+                 {{ cant.fecha_venc }}
+            </td>
+
+
+        </tr>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</table>
+{% endblock %}

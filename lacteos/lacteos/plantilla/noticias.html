@@ -4,27 +4,25 @@
             <div class="main">
                 <section id="content">
                     <div class="indent">
-
                     	<div class="wrapper">{% csrf_token %}
                              {% if user.is_authenticated %}
                              <br><a href="/noticia/nueva" class="button-2">Nueva Noticia </a>
                              {% endif %}
                              {% for dato in lista %}
-                              <div class="not>
+                                <div class="not>
                                   <article class="col-1">
                                   <div class="bg">
-
-                                    	<h3><p>{{dato.NoticiaNombre}}</p></h3>
-                                         <p>{{ dato.fecha }}</p>
-                                        <p>{{ dato.Contenido }}</p>
-                                        <img src="/media/{{ dato.foto }}" width="300" height="200"></a></p>
-                                  </div>
+                                       <p>{{ dato.fecha }}</p>
+                                       <center> <h3><p>{{dato.NoticiaNombre}}</p></h3>
+                                       <p>{{ dato.Contenido }}</p>
+                                       <img src="/media/{{ dato.foto }}" width="300" height="200"></a></p></center>
+                                  </div></div>
                                   </article>
-                              </div>
-                            {% endfor %}
+
+                              {% endfor %}
 
                         </div>
-                    </div>
+ </div>
 
                 </section>
                 <div class="block"></div>

@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block contenido %}
+<div class="inner" xmlns="http://www.w3.org/1999/html">
+            <div class="main" >
+                <section id="content">
+						        <div class="newsletter">{% csrf_token%}
+
+
+                                    {% if user.is_authenticated %}
+                                     <br><a href="/crear/reporte/" class="button-1">REPORTE DE PRODUCTOS</a></br>
+                                     <br><a href="/crear/reporte/" class="button-1">REPORTE DE USUARIOS</a></br>
+                                     <br><a href="/crear/reporte/" class="button-1">REPORTE DE VENTAS</a></br>
+                                    {% endif %}
+
+						        </div>
+                </section>
+                    <div class="block"></div>
+            </div>
+        </div>
+
+
+
+
+{% endblock %}
