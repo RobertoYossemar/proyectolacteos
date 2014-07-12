@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block contenido %}
+	  <div  class="agrprod">
+                    <h2>Listado de Productos</h2>
+        <div class="lisprod">
+                    {% for producto in productos %}
+                        {% for sto in stock %}
+                            {% if producto.id == sto.reg_pro_id %}
+                                <a href="/cantidad/{{venta.id}}/{{ producto.id }}">
+                                            <h3>{{ producto.NombreProduc }}</h3>
+                                            <p class="agregar">
+                                                <img src="/media/{{ producto.Portada }}" width="120" height="120">
+                                            </p>
+                                            <p><strong>Precio: </strong>{{ producto.Precio }} Bs.</p>
+                                            <p><strong>Cantidad:</strong>{{ sto.cantidad }}</p>
+                                            <p><strong>Fecha Vencimiento: </strong>{{sto.fecha_venc }}</p>
+
+                                </a>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+        </div>
+        <div id="carrito_comprassss" class="agrcarrcomp">
+
+                            <h2>Productos en el Carrito</h2>
+
+                                <p class="lead">
+                                    <strong>Precio Total: </strong>
+                                    {{ venta.costo_total }} <strong>Bs.</strong>
+                                </p>
+                                <p>
+                                    <a href="{% url 'apps.compras.views.confirmar' venta.id %}" class='btn'>Confirmar</a>
+                                </p>
+
+                            {% for detalle in detalleventa %}
+                                {% for producto in productos %}
+                                    {% if detalle.producto_id == producto.id %}
+
+                                                <h4>{{ producto.NombreProduc }}</h4>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+        </div>
+      </div>
+{% endblock  %}
+
+
+
+

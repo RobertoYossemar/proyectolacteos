@@ -1,0 +1,32 @@
+<script>
+    $( "#fcarrito" ).submit(function( event ) {
+        //Aqui enviamos el formulario mediante ajax
+        var direccion=$("#fcarrito").attr('action');
+        $.ajax({
+            type:'POST',
+            url:direccion,
+            data:$("#fcarrito").serialize(),
+            success: ActualizarCarrito,
+            error:errores
+        });
+        $('.reveal-modal').trigger('reveal:close');
+        event.preventDefault();
+    });
+    function ActualizarCarrito(data){
+        $('#carrito').text(data);
+    }
+    function errores(){
+        alert("Error en el servidor");
+    }
+    function cerrar(){
+        var otro=$('.reveal-modal');
+        otro.trigger('reveal:close');
+    }
+</script>
+<form action="/productos/carrito/add/{{ pro.id }}/" method="post" id="fcarrito">
+    {% csrf_token %}
+    <h3>Nombre: {{ pro.NombreProduc }}</h3>
+    <p><img src="/media/{{ pro.Portada }}" height="120" width="120"></p>
+    {{ fcarr }}
+    <input type="submit" value="Añadir a Carrito" onclick="cerrar()">
+</form>

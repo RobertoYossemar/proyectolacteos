@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="utf-8">
+<head>
+    <title>Facturacion de Pil Tarija</title>
+</head>
+    <style >
+     h2{color: #000000; display: ruby-base-group; background: #ffffff; padding: 10px; text-align: center }
+     .banne{border:solid 3px #002a80;text-align: center;background: #ffffff;}
+     table { padding: 5px; color: firebrick}
+     th{ color: #000000; background: #ffffff
+     }
+     table{color: #ffffff; background: #090473
+     }
+     .enc{width: 100%;background: #ffffff
+     }
+     .otr{text-align: left}
+     .pie{border: solid 3px #002a80;text-align: center; }
+     {background: black}
+
+    </style>
+    <div class="banne">
+        <h2>Pil Tarija</h2><br/>
+         CASA MATRIZ<br/>
+        Plaza 25 de Agosto S/n<br/>
+        Telfs: 64-44042 64-71248<br/>
+        Tarija--Bolivia
+
+         <table class="enc" >
+             <th width="34%" class="otr">
+                 NIT: 66594478215<br/>
+        FACTURA N° 021{{ cliente.CI_NIT }}<br/>
+        AUTORIZACION: 0002901091557
+             </th>
+             <th width="40%" class="otr">
+                 N°: 66594478215<br/>
+         NOMBRE: {{ cliente.nombre }} {{ cliente.ap_paterno }} {{ cliente.ap_materno }} <br/>
+        DIRECCION: {{ cliente.direcion }}
+             </th>
+             <th width="26%" class="otr">
+                E-MAIL: {{ cliente.email }} <br/>
+         
+         CI/NIT: {{ cliente.CI_NIT }}<br/>
+             </th>
+
+
+         </table>
+    </div>
+    <div>
+        <table border="1px" width="100%" align="center" >
+            <th>
+                NOMBRE PRUDUCTO
+            </th>
+
+            <th>
+               PRECIO UNITARIO DE PRODUCTOS
+            </th>
+            <th>
+                CANTIDAD TOTAL DE PRODUCTOS
+            </th>
+        {% for f in pedido %}
+            {% for p in f.producto.all %}
+                <tr>
+
+                    <td>
+
+
+               {{p.NombreProduc}}
+
+
+                        
+
+
+                    </td>
+
+
+
+                    <td>
+
+                         {{ p.Precio }} BS.
+
+                    </td>
+
+                </tr>
+                {% endfor %}
+        {% endfor %}
+            <th class="otr">
+              CODIGO DE CONTROL: {{ codigo }}
+            </th>
+            <th class="otr">
+               PRECIO TOTAL  BS. {{ venta.precio_total }}
+            </th>
+            <th>
+                        {{ venta.cantidad }}
+            </th>
+
+        
+
+        </table>
+        
+    </div>
+    <div class="pie">
+        <h4>La reproducción total o parcial y/o el uso no autorizado deesta nota fiscal, constituye un delito a ser sancionado conforme a ley</h4>
+    </div>
+
+</html>

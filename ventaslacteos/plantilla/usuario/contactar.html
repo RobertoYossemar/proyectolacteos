@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+{% block contenido %}
+{% endblock %}
+{% block pie %}
+    <div class="bottom">
+			<div class="container">
+				<div class="clearfix">
+					<div class="grid3 first">
+						<h3>Contactanos</h3>
+						<div class="wrapper">
+							<dl class="address">
+                                <form action="" id="contacts-form">
+							        <fieldset>
+                                        {% if info_enviado %}
+                                            Gracias pro enviar un comentario, nos contactaremos contigo
+                                            <br>
+                                            La informacion  recibida es la siguiente<br>
+                                            <p>Email utlizado:{{ email }}</p>
+                                            <p>Texto Citado:</p><br><h3>{{ texto }}</h3>
+                                            {% else %}
+                                        <form  action="." method="POST">
+                                            {% csrf_token %}
+                                            {{ form.as_p }}
+                                           <input type="submit" value="Enviar"/>
+                                        </form>
+                                        {% endif %}
+                                    </fieldset>
+						        </form>
+							</dl>
+						</div>
+					</div>
+					<div class="grid6">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="wrapper">
+				<div class="copy">Pil Andina (c) 2014	|	<a href="index-4.html"></a></div>
+				<address class="phone">
+
+				</address>
+			</div>
+		</div>
+	</footer>
+
+{% endblock %}

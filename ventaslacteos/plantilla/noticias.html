@@ -1,0 +1,66 @@
+{% extends 'index.html' %}
+{% block contenido %}
+    <section id="content">
+		<div class="top">
+			<div class="container">
+				<div class="clearfix">
+					<div class="grid3 first">
+						<h2></h2>
+							</div>
+					<div class="grid9">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="middle">
+			<div class="container">
+				<div class="clearfix">
+					<div class="grid3 first">
+						<h2></h2>
+						<div class="wrapper">
+							<dl class="departments">
+
+							</dl>
+						</div>
+					</div>
+					<div class="grid9">
+						<h2>Noticias PIL</h2>
+						<div class="img-box">
+							{% csrf_token %}
+                             {% if user.is_authenticated and user.id == 1%}
+                             <br><a href="/noticia/nueva" class="button-2">Nueva Noticia </a>
+                             {% endif %}
+                             {% for dato in lista %}
+                                <div class="not">
+                                  <article class="col-1">
+                                  <div class="bg">
+                                       <p>{{ dato.fecha }}</p>
+                                       <center> <h3><p>{{dato.NoticiaNombre}}</p></h3>
+                                       <p>{{ dato.Contenido }}</p>
+                                       <p><a><img src="/media/{{ dato.foto }}" width="300" height="200"></a></p></center>
+                                  </div>
+                                  </article>
+                                </div>
+                        </div>
+
+
+                              {% endfor %}
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</section>
+
+
+
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="utf-8">
+<head>
+    <title>Usuarios</title>
+</head>
+    <style >
+     h2{color: #000000; display: ruby-base-group; background: #ffffff; padding: 10px; text-align: center }
+     .banne{border:solid 3px #002a80;text-align: center;background: #ffffff;}
+     table { padding: 5px; color: firebrick}
+     th{ color: #000000; background: #ffffff
+     }
+     table{color: #ffffff; background: #090473
+     }
+     .enc{width: 100%;background: #ffffff
+     }
+     .otr{text-align: left}
+     .pie{border: solid 3px #002a80;text-align: center; }
+     {background: black}
+
+    </style>
+    <div class="banne">
+        <h2>lista de Usuarios</h2>
+
+    </div>
+    <div>
+        <table border="1px" width="100%" align="center" >
+
+
+            <th>
+                NOMBRES
+            </th>
+            <th>
+                CI_NIT
+            </th>
+            <th>
+                E-MAIL
+            </th>
+            <th>
+               DIRECCION
+            </th>
+                 {% for i in cliente %}
+
+
+
+                <tr>
+                    <td>
+                        {{i.nombre }} {{ i.ap_paterno }} {{ i.ap_materno }}
+                    </td>
+                    <td>
+                        {{ i.CI_NIT }}
+                    </td>
+                    <td>
+                        {{ i.email }}
+                    </td>
+                    <td>
+                        {{ i.direcion }}
+                    </td>
+
+                </tr>
+
+    {% endfor %}
+        
+
+        </table>
+
+    </div>
+
+
+</html>

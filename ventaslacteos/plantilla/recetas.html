@@ -1,0 +1,74 @@
+{% extends 'index.html' %}
+{% block contenido %}
+    <section id="content">
+		<div class="top">
+			<div class="container">
+				<div class="clearfix">
+					<div class="grid3 first">
+						<h2></h2>
+							</div>
+					<div class="grid9">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="middle">
+			<div class="container">
+				<div class="clearfix">
+					<div class="grid3 first">
+						<h2></h2>
+						<div class="wrapper">
+							<dl class="departments">
+
+							</dl>
+						</div>
+					</div>
+                        <div class="grid9">
+						<h2>Recetas PIL</h2>
+						<div class="img-box">
+							{% csrf_token %}
+                             {% if user.is_authenticated and user.id == 1%}
+                             <br><a href="/receta/nueva" class="button-2">Nueva receta </a>
+                             {% endif %}
+                            {% for dato in lista %}
+                              <div class="not>
+                                  <article class="col-1">
+                                  <div class="bg">
+                                        <p>{{dato.fecha}}</p>
+                                      <center> <strong class="title" >
+                                       <H3><strong>{{dato.NombreReceta}}</strong></H3> </strong><br>
+
+                                        <img src="/media/{{ dato.foto }}" width="300" height="200"></center>
+                                        <h4>Ingredientes</h4>
+                                        <p>{{ dato.ingredientes }}</p>
+                                        <h4>Preparacion</h4>
+                                        <p>{{dato.preparacion}}</p>
+
+                                        </a></p>
+                                  </div>
+                                  </article>
+                               </div>
+                            {% if user.is_authenticated and user.id == 1%}
+                                    <a href="{% url 'apps.productos.views.Modificar_receta' dato.id %}" class="button-2"> modificar </a>
+                                    {% endif %}
+                            {% endfor %}
+
+                       </div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</section>
+
+
+
+                </section>
+                <div class="block"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

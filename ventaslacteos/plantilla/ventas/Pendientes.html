@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% block contenido %}
+<section id="content">
+		<div class="top">
+                    <div>
+                        <h2>LISTADO DE VENTAS</h2>
+                    </div>
+                    <table border="2px" width="80%" align="center" class="tablesd">
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            NOMBRES
+                        </th>
+                        <th>
+                            DIRECCION
+                        </th>
+                        <th>
+                            E-MAIL
+                        </th>
+                        <th>
+                            CANTIDAD
+                        </th>
+                        <th>
+                            PRECIO TOTAL
+                        </th>
+                        <th>
+                            FECHA
+                        </th>
+                        <th>
+                            ESTADO
+                        </th>
+                        {% for i in ped %}
+                        {% for j in cliente %}
+                            {% if i.cliente_id == j.user_id %}
+
+                            <tr>
+                                <td>
+                                    {{ i.id }}
+                                </td>
+                                <td>
+                                    {{ j.nombre}} {{ j.ap_paterno }} {{ j.ap_materno }}
+                                </td>
+                                <td>
+                                    {{ j.direcion}}
+                                </td>
+                                <td>
+                                    {{ j.email}}
+                                </td>
+                                <td>
+                                    {{ i.cantidad }}
+                                </td>
+                                <td>
+                                    {{ i.precio_total }}
+                                </td>
+                                <td>
+                                    {{ i.fecha}}
+                                </td>
+                                <td>
+                                    {% if user.is_authenticated and user.id == 1%}
+                                    <a href="/producto/modipend/{{ i.id }}/ "> {{sms}}</a>
+                                {% endif %}
+
+                                </td>
+
+                                 </tr>
+                            {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+
+
+                    </table>
+        </div>
+</section>
+
+
+{% endblock %}

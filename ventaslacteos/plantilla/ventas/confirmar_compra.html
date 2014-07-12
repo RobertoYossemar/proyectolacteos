@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+{% block contenido %}
+    <div class="caja">
+        <div class="contenedor" id="producto">
+        <h4>Productos en Carrito</h4>
+        {% if carr.count > 0 %}
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Imagen</th>
+                    <th>Cantidad</th>
+                    <th>Precio de Producto</th>
+                    <th>Opciones</th>
+                </tr>
+                {% for i in carr %}
+                    <tr>
+                        <td>
+                            {{ i.producto.NombreProduc }}
+                        </td>
+                        <td>
+                            <img src="/media/{{ i.producto.Portada}}" width="50px" height="50px">
+                        </td>
+                        <td>
+                            {{ i.cantidad }}
+                        </td>
+                        <td>
+                            {{ i.producto.Precio }}Bs.
+                        </td>
+                        <td>
+                            <a href="/carrito/eliminar/{{ i.id }}/">Eliminar de Carrito</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <h1>Total a pagar es: {{ pre_total }}</h1>
+            <a href="/producto/comprar/final/">Realizar Compra</a>
+        {% else %}
+            No existen productos en el carrito
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}

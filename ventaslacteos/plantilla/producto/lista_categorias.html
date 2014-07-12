@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% block contenido %}
+<section id="content">
+    <div class="top">
+			<div class="container">
+				<div class="clearfix">
+					<section id="gallery">
+						<div class="pics">
+							{% for dato in lista %}
+                                <a href="/productos/{{dato.id}}/">
+                                <img src="/media/{{ dato.Portadacategoria }}"  width="495" height="329">
+                                {% if user.is_authenticated and user.id == 1%}
+
+                                    <a href="/modi/{{ dato.id }}/ "><h2> Modificar esta <br/>categoria</h2>
+
+                                {% endif %}
+                                </a>
+
+                                </a>
+                            {% endfor %}
+                        </div>
+						<a href="#" id="prev"></a>
+						<a href="#" id="next"></a>
+					</section>
+                    {% if user.is_authenticated and user.id == 1 %}
+                        <br><a href="/categoria/nueva" class="button-2">Agregar Nueva Categoria </a>
+                    {% endif %}
+
+					<section id="intro">
+						<div class="inner">
+							<h2>HAGA CLICK EN  <br/>LA CATEGORIA  QUE GUSTE
+							<p><span>O puede obsevar todos nuestros productos con un </span></p></h2>
+							<a href="/producto/" class="extra-button">CLICK</a>
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+</section>
+{% endblock %}

@@ -1,0 +1,63 @@
+<title>Reprotes</title>
+{% extends 'index.html' %}
+{% block contenido %}
+    <script>
+        function crearCampo(){
+            var opcion=$("#sopcion").val();
+            //alert(opcion);
+            if(opcion=="1"){
+                html="<input type='date' name='tfecha' id='tfecha'>"
+                $("#campo").html(html);
+            }
+            if(opcion=="2"){
+                $("#campo").html("");
+            }
+            if(opcion=="3"){
+                $("#campo").html("");
+            }
+        }
+    </script>
+
+    <div class="middle">
+			<div class="container">
+				<div class="wrapper">
+					<div class="grid3 first">
+						<ul class="categories">
+                        {% csrf_token%}
+                            {% if user.is_authenticated and user.id == 1%}
+                                <form action="/reporte/filtro/" method="post" name="fopcion">
+                                          {% csrf_token %}
+                                    <select id="sopcion" name="sopcion" onchange="crearCampo()">
+                                        <option value="0" id="0">Seleccionar filtro de reporte</option>
+                                        <option value="1" id="1">Ver reporte ventas por fecha</option>
+                                        <option value="2" id="2">Odrdenar prodcuctos alfabeticamente</option>
+                                        <option value="3" id="3">Odrdenar usuarios alfabeticamente</option>
+                                    </select>
+                                    <div id="campo">
+                                    </div>
+                                    <input type="submit" value="Generar Reporte">
+                                </form>
+                            <li><a href="/crear/reporte/">REPORTE DE PRODUCTOS</a></li>
+                            <li><a href="/reporte/usuario/">REPORTE DE USUARIOS</a></li>
+                            <li><a href="/venta/reporte/">REPORTE DE VENTAS</a></li>
+                        </ul>
+
+                            {% endif %}
+
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+                    <div class="block"></div>
+                     </div>
+
+
+
+
+
+{% endblock %}

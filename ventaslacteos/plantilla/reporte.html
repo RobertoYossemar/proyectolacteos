@@ -1,0 +1,55 @@
+{% block contenido %}
+    <style >
+     h2{color: white; display: ruby-base-group; background: orange; padding: 10px; text-align: center }
+     table { padding: 5px; color: firebrick}
+     th{ color: #ffffff; background: darkorange}
+     table{color:#000000; background: yellow}
+     {background: black}
+    </style>
+    <div>
+        <h2>LISTADO DE PRODUCTOS</h2>
+    </div>
+    <table border="1px" width="80%" align="center" >
+        <th>
+            PRODUCTOS
+        </th>
+        <th>
+            PRECIO
+        </th>
+        <th>
+            CANTIDAD
+        </th>
+        <th>
+            FECHA DE INGRESO
+        </th>
+        <th>
+            FECHA DE VENCIMIENTO
+        </th>
+        {% for i in productos %}
+         {% for j in stock %}
+            {% if i.id == j.reg_pro_id %}
+            <tr>
+                <td>
+                    {{ i.NombreProduc }}
+                </td>
+                <td>
+                    {{ i.Precio}}
+                </td>
+                <td>
+                    {{ j.cantidad }}
+                </td>
+                <td>
+                    {{ j.fecha_ing }}
+                </td>
+                 <td>
+                    {{ j.fecha_venc }}
+                </td>
+
+            </tr>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+
+
+    </table></table>
+{% endblock %}

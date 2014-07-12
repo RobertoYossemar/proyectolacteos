@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block contenido %}
+<section id="content">
+    <div class="top">
+        <div class="middle">
+			<div class="container">
+				<div class="wrapper">
+					<div class="grid3 first">
+
+				<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">{% csrf_token %}
+					{% for field in formulario %}
+						{{field.errors}}
+
+						<div class = "control-group">
+							{{ field.label_tag }}
+							<div class="controls">
+								{{ field}}
+
+							</div>
+
+						</div>
+					{% endfor %}
+                    <div class="grid3 first">
+					<button type="submit"> modificar </button> 
+                    </div>
+				</form>
+</div>
+
+				</div>
+			</div>
+		</div>
+        <div class="block"></div>
+        </div>
+
+</section>
+
+
+
+
+{% endblock %}

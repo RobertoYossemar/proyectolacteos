@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% block contenido %}
+    <section id="content">
+		<div class="top">
+            <div class="agrgar">
+
+
+                        {% if user.is_authenticated and user.id == 1 %}
+                            <p class="agregar"><a href="/producto/nuevo" class="extra-button" >Agregar Nuevo Producto </a></p>
+                        {% endif %}
+            </div>
+
+		<div class="middle">
+			<div class="container">
+				<div class="wrapper">
+					<div class="grid3 first">
+
+					</div>
+                <div id="carrito_content">
+        <h4>Productos en carrito:</h4>
+        <div id="carrito">
+
+        </div>
+        <a href="/confirmar/compra/">Confirmar Compra</a>
+    </div>
+					<div class="grid9">
+						<section class="images">
+
+                                {% for fila in lista %}
+                                    {% for cant in listastock %}
+                                        {% if fila.id == cant.reg_pro_id %}
+                                          <figure>
+                                            <br> Nombre.- {{ fila.NombreProduc }}<br>
+                                            Precio Unidad.-Bs.{{ fila.Precio }}<br>
+                                            Cantidad Existente.-{{ cant.cantidad }} {{ cant.unidad }}
+                                            <p>
+                                            <img src="/media/{{ fila.Portada }}" width="120" height="90">
+                                            </p>
+                                            <p>
+                                            {% if user.is_authenticated and user.id == 1 %}
+					                            <a href="{% url 'apps.productos.views.Modificar_Producto' fila.id %}" class="button-2"> Modificar </a>
+                                            {% endif %}
+                                            </p>
+                                          {% if not user.id == 1%}
+                                            <a href="/productos/cargar/carrito/{{ fila.id }}/" data-reveal-id="myModal" class="enlace">Comprar</a>
+                                           {% endif %}
+                                          </figure>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                        </section>
+                            <div id="myModal" class="reveal-modal">
+                    <div id="formulario">
+                 </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    </section>
+
+
+{% endblock %}

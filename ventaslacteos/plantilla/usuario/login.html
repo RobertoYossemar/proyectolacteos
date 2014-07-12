@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block contenido %}
+ <section id="content">
+		<div class="top">
+			<div class="container">
+				<div class="clearfix">
+					<section id="gallery">
+						<div class="pics">
+							<img src="{{ STATIC_URL }}plantillas/images/slide1.jpg" alt="" width="495" height="329">
+							<img src="{{ STATIC_URL }}plantillas/images/slide3.jpg" alt="" width="495" height="329">
+							<img src="{{ STATIC_URL }}plantillas/images/slide2.jpg" alt="" width="495" height="329">
+							<img src="{{ STATIC_URL }}plantillas/images/slide4.jpg" alt="" width="495" height="329">
+							<img src="{{ STATIC_URL }}plantillas/images/slide5.jpg" alt="" width="495" height="329">
+						</div>
+						<a href="#" id="prev"></a>
+						<a href="#" id="next"></a>
+					</section>
+					<section id="intro">
+					    <div class="inner">
+                            <form  action="" method="post" class="formulario">
+                                <h2>Iniciar sesion</h2><br>
+                                    {{ mensaje }}
+                                    {% csrf_token %}
+                                    {{ form.as_ul }}
+                                <li class="para_botones"><input type="submit" name="bingresar" value="Ingresar">
+                                </li>
+                                <label>¿Eres nuevo? <a href="/usuario/">registrate</a></label>
+                            </form>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+
+</section>
+{% endblock %}
